@@ -1,0 +1,12 @@
+---
+layout: base.njk
+permalink: "/blog/"
+---
+<article>{{ content | safe }}</article>
+
+{% for tag in tags | exclude("blog") %}
+<li class="tags">
+    <a href="/blog/tagged/{{ tag | slugify }}" class="tags">#{{ tag }} </a>
+</li>
+{% endfor %}
+</ul>
