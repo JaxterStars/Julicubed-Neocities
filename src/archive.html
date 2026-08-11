@@ -1,0 +1,38 @@
+---
+layout: /base.njk
+style: /css/blog.css
+pagination:
+  data: collections.post
+  size: 2
+  alias: posts
+  reverse: true
+---
+<div class="archive-content">
+    <div class="box" style="margin:unset">
+        <div class="box-title">
+            <span>ARCHIVE</span>
+        </div>
+        <div class="box-content blog-post">
+            {% for post in collections.post reversed %}
+            <h1>{{ post.data.title }} - {{ post.date | niceDate }}</h1>
+            {% excerpt post %} <a href="{{post.url}}">read more</a>
+            {% endfor %}
+        <div class="navigation">
+            <p>
+                {% if pagination.href.previous %}
+                <a href=" {{ pagination.href.previous }}">Previous</a>
+                {% else %}
+                Previous
+                {% endif %}
+                /
+                {% if pagination.href.next %}
+                <a href=" {{ pagination.href.next }}">Next</a>
+                {% else %}
+                Next
+                {% endif %}
+            </p>
+        </div>
+        </div>
+
+    </div>
+</div>

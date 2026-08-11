@@ -254,3 +254,59 @@
 
 }
 /* Right content end */
+
+@media (max-width: 780px) {
+    .sidebar-r {
+        display: flex;
+        flex-wrap: wrap;
+        order: 3;
+    }
+    .socials {
+        grid-template-columns: repeat(3, 1fr);
+        width: unset;
+    }
+    .sidebar-l {
+        order: 2;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .sidebar-m {
+        order: 1;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .welcome {
+        display: none;
+    }
+    .profile-picture {
+        order:1;
+        width: 100%;
+    }
+    .about-me {
+        grid-column: span 2 / span 2;
+        order:3;
+    }
+    .socials {
+        grid-column: span 2 / span 2;
+        order:4
+    }
+    .profile-content {
+        display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    }
+    .status-block {
+        max-height: 20vw;
+    }
+    .index-content {
+        padding: unset;
+        gap: unset;
+    }
+    .index-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+}

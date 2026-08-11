@@ -1,0 +1,40 @@
+---
+pagination:
+  data: collections.categories
+  size: 1
+  alias: category
+permalink: "/categories/{{ category | slugify }}/index.html"
+layout: /base.njk
+style: /css/blog.css
+eleventyComputed:
+title: "Category: {{ category }}"
+---
+
+<div class="archive-content">
+    <div class="box" style="margin:unset">
+        <div class="box-title">
+            <span>ARCHIVE</span>
+        </div>
+        <div class="box-content blog-post">
+            {% assign posts = collections.post | filterByCategory: category %}
+            {% for post in posts reversed %}
+
+            <h1>{{ post.data.title }} - {{ post.date | niceDate }}</h1>
+            {% excerpt post %} <a href="{{post.url}}">read more</a>
+            {% endfor %}
+        <div class="navigation">
+            <p>
+                {% if pagination.href.previous %}
+                <a href=" {{ pagination.href.previous }}">Previous</a>
+                {% else %}
+                Previous
+                {% endif %}
+                /
+                {% if pagination.href.next %}
+                <a href=" {{ pagination.href.next }}">Next</a>
+                {% else %}
+                Next
+                {% endif %}
+            </p>
+        </div>
+        </div>

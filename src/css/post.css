@@ -1,0 +1,27 @@
+
+h1, p {
+    margin: 1rem;
+}
+a {
+    text-decoration: underline;
+}
+
+.post-content {
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+}
+ h1 {
+    background-color: var(--h1);
+    padding: 3px;
+}
+.blog-post a{
+    text-decoration: underline;
+}
+
+@media (max-width: 780px) {
+    .post-content {
+        padding: unset;
+        gap: unset;
+    }
+}
