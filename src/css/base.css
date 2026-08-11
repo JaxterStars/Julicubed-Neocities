@@ -1,0 +1,330 @@
+/* ROOT */
+:root {
+    --button-color: rgb(210, 210, 210);
+    --button-color-hover: rgb(168, 168, 168);
+    --wrap-color: rgba(208, 211, 211, 0.9);
+    --marquee-color:rgb(146, 146, 146);
+    --nav-color:rgb(255, 255, 255);
+    --nav-color-hover:rgb(234, 234, 234);
+    --box-content-color: rgb(249, 249, 250);
+    --box-subcontent-color: rgb(210, 210, 210);
+    --box-subcontent-border: 3px rgb(86, 86, 86) solid;
+    --h1: rgb(209, 210, 210);
+    --nav-color-bg: rgb(0, 0, 0);
+    --dither-gradient: url("/img/Index/dither.jpg"),linear-gradient(90deg,rgba(69, 69, 69, 1) 27%, rgba(181, 181, 181, 1) 100%);
+    --banner-bg: url(/img/Index/banner.jpg);
+    --bg-image: url(/img/Index/BG.jpg);
+    --bg-color:rgb(48, 48, 48);
+}
+
+/* FONTS  */
+@font-face {
+font-family: "04b03b";
+src: url('/fonts/04B_03B_.TTF') format("truetype");
+}
+
+@font-face {
+font-family: "Saitamaar";
+src: url('/fonts/Saitamaar-Regular.ttf') format("truetype");
+}
+
+@font-face {
+font-family: "04b31";
+src: url('/fonts/04B_31__.TTF') format("truetype");
+}
+
+@font-face {
+font-family: "04b11";
+src: url('/fonts/04B_11__.TTF') format("truetype");
+}
+/* FONTS END */
+
+/* Main */
+* {
+    box-sizing: border-box;
+    image-rendering: pixelated;
+}
+
+body {
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--bg-color);
+    background-blend-mode: screen;
+    cursor: url(/img/cursor/normal\ Select.png), auto;
+    font-size: 1rem;
+    line-height: 1.1;
+    margin: 0;
+    font-family: 'Saitamaar';
+    
+}
+a {
+    
+    text-decoration: none;
+    color: black;
+    cursor: url(/img/cursor/link\ Select.png), auto;
+}
+h1, p {
+    margin: 1px
+}
+/* Main End */
+
+.wrap {
+    background-color: var(--wrap-color);
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+    border: 2px solid;
+}
+
+.top-bar {
+    background:  var(--dither-gradient);
+    background-blend-mode: multiply;
+    background-size: 50px, auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    padding: 3px;
+}
+
+.banner {
+    min-height: 150px;
+    background-color: rgb(152, 152, 152);
+    border-bottom: 1px solid;
+    background: var(--banner-bg);
+    background-size: cover;
+}
+
+.nav {
+    background-color: var(--nav-color-bg);
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    border-bottom: 1px solid;
+    gap: 1px;
+}
+
+.nav a {
+    display: block;
+    margin: auto;
+    font-family: '04b31';
+    font-size: 12px;
+    width: 100%;
+    background-color: var(--nav-color);
+    padding: 2px 8px;
+    text-align: center;
+}
+
+.nav a:hover {
+    background-color: var(--nav-color-hover);
+}
+
+/* Marquee */
+.text-scroll {
+    --gap: 1rem;
+    border-bottom: 1px solid;
+    overflow: hidden;
+    display: flex;
+    gap: var(--gap);
+    background-color: var(--marquee-color);
+}           
+
+.text-scroll-content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap);
+  animation: scroll 90s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+/* Marquee end */
+
+/* Box */
+.box {
+    margin-top: 10px;
+    border: 1px solid;
+    width: 100%;
+}
+
+.box-title {
+    background: var(--dither-gradient);
+    background-blend-mode: multiply;
+    background-size: 50px, auto;
+    padding: 2px 5px;
+    border-bottom: 1px solid;
+    font-style: italic;
+    font-size: 1rem;
+    color: white;
+    /* clip-path: polygon(0 0, 95% 0%, 100% 40%, 100% 100%, 0 100%); */
+}
+
+.box-title span {
+    
+    text-decoration: underline;
+}
+
+.box-content {
+    padding: 8px;
+    background-color: var(--box-content-color)
+}
+/* Box end */
+
+/* Pic */
+.pic img {
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale();
+}
+
+.pic img:hover {
+    filter: unset;
+}
+/* Pic end */
+
+.text-scroll-mobile {
+    display: none;
+}
+
+/* Chatroom */
+.chatroom {
+    position:fixed;
+    bottom: -330px;
+    left: 1px;
+    z-index: 99999;
+    transition:0.2s;
+    filter: grayscale();
+}
+
+.chatroom:hover {
+    bottom: 20px;
+    transition:0.2s;
+
+}
+
+.chatroom-content {
+    width: 250px;
+    height: 350px;
+    background-color: rgb(115, 115, 115);
+}
+
+.chatroom-title {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.chatroom-title a{
+    color:white;
+}
+
+.chatroom-responsive {
+    padding: 0;
+    filter: grayscale();
+    height: 350px;
+}
+
+.chatroom-responsive-show {
+    display: none;
+}
+/* Chatroom */
+
+@media (max-width: 1500px) {
+    .chatroom {
+        display: none;
+    }
+.chatroom-responsive-show {
+    display: block;
+}
+}
+@media (max-width: 780px) {
+    .main-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .wrap {
+        max-width: 100%;
+        border: 0;
+        }
+    .nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #linkNav{
+        grid-column: span 3
+    }
+    .welcome {
+        display: none;
+    }
+    .profile-picture {
+        order:1;
+        width: 100%;
+    }
+    .about-me {
+        grid-column: span 2 / span 2;
+        order:3;
+    }
+    .textbox {
+        order:2;
+
+    }
+    .socials {
+        grid-column: span 2 / span 2;
+        order:4
+    }
+    .profile-content {
+        display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    }
+    .status-block {
+        max-height: 20vw;
+    }
+    .banner {
+        min-height: 25vw;
+    }
+    .box {
+        margin-top: 0px;
+    }
+    .box-title {
+        clip-path: unset;
+    }
+    .main-content {
+        padding: unset;
+        gap: unset;
+    }
+    .text-scroll {
+        display: none;
+    }
+    .text-scroll-mobile {
+        display: flex;
+    }
+    .sidebar-l {
+        order: 2;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .sidebar-m {
+        order: 1;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .sidebar-r {
+        display: flex;
+        flex-wrap: wrap;
+        order: 3;
+    }
+    .socials {
+        grid-template-columns: repeat(3, 1fr);
+        width: unset;
+    }
+}
