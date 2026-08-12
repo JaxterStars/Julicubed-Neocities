@@ -37,6 +37,28 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection("updates", function(collectionApi) {
     return collectionApi.getFilteredByGlob("./src/update/*.md");
   });
+  
+eleventyConfig.addCollection("artCategories", function (collectionApi) {
+  let artCategories = new Set();
+  let posts = collectionApi.getFilteredByTag('art') || [];
+  posts.forEach(p => {
+    let cats = p.data.artCategories || [];
+    cats.forEach(c => {
+      if (c) artCategories.add(c);
+    });
+  });
+  return Array.from(artCategories);
+});
+
+eleventyConfig.addFilter("filterByArtCategory", function (posts, cat) {
+  if (!posts || !cat) return [];
+  cat = cat.toLowerCase();
+  let result = posts.filter(p => {
+    let cats = p.data.artCategories?.map(s => s ? s.toLowerCase() : "") || [];
+    return cats.includes(cat);
+  });
+  return result;
+});
 
   eleventyConfig.addCollection("categories", function (collectionApi) {
     let categories = new Set();

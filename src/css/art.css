@@ -16,7 +16,9 @@ article P {
     gap: 4px;
 }
 .box-content img{
+    width: 100%;
     max-width: 750px;
+    image-rendering: auto;
 }
  h1 {
     background-color: var(--h1);

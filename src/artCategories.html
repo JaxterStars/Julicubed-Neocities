@@ -1,9 +1,16 @@
 ---
-title: Hello World!
+pagination:
+  data: collections.artCategories
+  size: 1
+  alias: artCategory
+permalink: "/art-categories/{{ artCategory | slugify }}/index.html"
 layout: /base.njk
 style: /css/gallery.css
+eleventyComputed:
+title: "Category: {{ artCategory }}"
 ---
-<div class="gallery-content">
+
+<div class="artCategory-content">
     <div class="sidebar-m">
         <div class="box" style="margin:unset">
             <div class="box-title">
@@ -11,7 +18,9 @@ style: /css/gallery.css
             </div>
             <div class="box-content">
                 <div class="gallery">
-                    {% for post in collections.art | reverse %}
+            {% assign posts = collections.art | filterByArtCategory: artCategory %}
+            
+                    {% for post in posts | reverse %}
                     <a href="{{ post.url }}"><img src="/img/art/thumbnails/{{ post.data.thumbnail }}"
                             loading="lazy" /></a> {{
                     post.data.dateString }}
@@ -20,17 +29,6 @@ style: /css/gallery.css
             </div>
         </div>
     </div>
-    <div class="sidebar-r">
-        <div class="box" style="margin:unset">
-            <div class="box-title">
-                <span>TAGS</span>
-            </div>
-            <div class="box-content category">
-                {% for cats in collections.artCategories reversed %}
-                <a href="/art-categories/{{ cats | slugify }}/">{{ cats }}</a>
-                {% endfor %}
-
-            </div>
         </div>
     </div>
 </div>

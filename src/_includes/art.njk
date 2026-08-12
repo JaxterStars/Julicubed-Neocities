@@ -12,6 +12,10 @@ permalink: "/art/"
       <h1>{{ title }}</h1>
       <p>
         <strong>Posted: </strong> {{ date | niceDate }}<br />
+        <strong>Categories:</strong>
+        {% for cats in artCategories %}
+          <a href="/art-categories/{{ cats | slugify }}/">{{ cats }}</a>
+        {% endfor %}
       </p>
       <article>{{ content | safe }}</article>
     </div>
