@@ -1,0 +1,31 @@
+---
+title: Hello World!
+layout: /base.njk
+style: /css/about.css
+partialsCSS:
+- /css/_partials/profile.css
+---
+<div class="about-content">
+    <div class="sidebar-m">
+        <div class="box" style="margin:unset;">
+            <div class="box-title">
+                <span>ABOUT</span>
+            </div>
+            <div class="box-content">
+
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-r">
+
+        {% include "../_partials/profile.njk" %}
+        <div class="box" style="margin:unset;">
+            <div class="box-title">
+                <span>ABOUT</span>
+            </div>
+            <div class="box-content">
+            </div>
+        </div>
+
+    </div>
+</div>

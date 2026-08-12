@@ -1,92 +1,102 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="{{ style }}">
+    {% if partialsCSS %}
+    {% for cssPath in partialsCSS %}
+    <link rel="stylesheet" href="{{ cssPath }}">
+    {% endfor %}
+    {% endif %}
     <title>{{ title }}</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.gif">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="/js/sound.js"></script>
     <script src="https://u.widget.st/ar.js"></script>
-  </head>
-    </body>
-    <div class="chatroom">
-        <div class="chatroom-content">
+</head>
+</body>
+<div class="chatroom">
+    <div class="chatroom-content">
         <div class="box-title chatroom-title">
             <span>CHATROOM</span>
-            <a href="https://www5.cbox.ws/box/?boxid=960091&boxtag=chEDyg" onclick="window.open(this.href, 'popup', 'width=250,height=350,scrollbars=yes,resizable=yes'); return false;">(not loading?)</a>
+            <a href="https://www5.cbox.ws/box/?boxid=960091&boxtag=chEDyg"
+                onclick="window.open(this.href, 'popup', 'width=250,height=350,scrollbars=yes,resizable=yes'); return false;">(not
+                loading?)</a>
         </div>
-        <iframe src="https://www5.cbox.ws/box/?boxid=960091&boxtag=chEDyg" width="100%" height="100%" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
-        </div>
+        <iframe src="https://www5.cbox.ws/box/?boxid=960091&boxtag=chEDyg" width="100%" height="100%"
+            allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0"
+            scrolling="auto"></iframe>
     </div>
-    <div class="wrap">
-        <!-- Top Bar -->
-        <div class="top-bar">
+</div>
+<div class="wrap">
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <span>jaxterstars.neocities.org</span>
+    </div>
+    <!-- Banner -->
+    <div class="banner">
+    </div>
+    <!-- Marquee - Mobile -->
+    <div class="text-scroll text-scroll-mobile">
+        <div class="text-scroll-content">
+            <span>THE BEES KNEES</span>
             <span>jaxterstars.neocities.org</span>
+            <span>MONOCHROMATIC</span>
+            <span>ALLERGIC TO COLOUR</span>
+            <a href="">egg</a>
         </div>
-        <!-- Banner -->
-        <div class="banner">
-        </div>
-        <!-- Marquee - Mobile -->
-        <div class="text-scroll text-scroll-mobile">
-            <div class="text-scroll-content">
-                <span>THE BEES KNEES</span>
-                <span>jaxterstars.neocities.org</span>
-                <span>MONOCHROMATIC</span>
-                <span>ALLERGIC TO COLOUR</span>
-                <a href="">egg</a>
-            </div>
-            <div class="text-scroll-content">
-                <span>THE BEES KNEES</span>
-                <span>jaxterstars.neocities.org</span>
-                <span>MONOCHROMATIC</span>
-                <span>ALLERGIC TO COLOUR</span>
-                <a href="">egg</a>
-            </div>
-        </div>
-        <!-- Navigation -->
-        <div class="nav">
-            <a href="/">>>HOME</a>
-            <a href="#about">>>ABOUT</a>
-            <a href="/art/">>>ART</a>
-            <a href="/blog/">>>BLOG</a>
-            <a href="/guest-book/">>>GUEST</a>
-            <a href="/links/#personal">>>LINKS</a>
-        </div>
-        <!-- Marquee -->
-        <div class="text-scroll">
-            <div class="text-scroll-content">
-                <span>THE BEES KNEES</span>
-                <span>jaxterstars.neocities.org</span>
-                <span>MONOCHROMATIC</span>
-                <span>ALLERGIC TO COLOUR</span>
-                <a href="">egg</a>
-            </div>
-            <div class="text-scroll-content">
-                <span>THE BEES KNEES</span>
-                <span>jaxterstars.neocities.org</span>
-                <span>MONOCHROMATIC</span>
-                <span>ALLERGIC TO COLOUR</span>
-                <a href="">egg</a>
-            </div>
-        </div>
-        <!-- Main Content -->
-        <div class="content">
-            {{ content | safe }}
-            </div>
-        <!-- Bottom Bar -->
-        <div class="bottom-bar">
-            a
+        <div class="text-scroll-content">
+            <span>THE BEES KNEES</span>
+            <span>jaxterstars.neocities.org</span>
+            <span>MONOCHROMATIC</span>
+            <span>ALLERGIC TO COLOUR</span>
+            <a href="">egg</a>
         </div>
     </div>
-    <audio id="mySound" style="display: none" preload="auto">
-  <source src="https://files.catbox.moe/bc2t8s.mp3" type="audio/mpeg" />
-  <script src="js/musicplayer.js"></script>
+    <!-- Navigation -->
+    <div class="nav">
+        <a href="/">>>HOME</a>
+        <a href="/about/">>>ABOUT</a>
+        <a href="/art/">>>ART</a>
+        <a href="/blog/">>>BLOG</a>
+        <a href="/guest-book/">>>GUEST</a>
+        <a href="/links/#personal">>>LINKS</a>
+    </div>
+    <!-- Marquee -->
+    <div class="text-scroll">
+        <div class="text-scroll-content">
+            <span>THE BEES KNEES</span>
+            <span>jaxterstars.neocities.org</span>
+            <span>MONOCHROMATIC</span>
+            <span>ALLERGIC TO COLOUR</span>
+            <a href="">egg</a>
+        </div>
+        <div class="text-scroll-content">
+            <span>THE BEES KNEES</span>
+            <span>jaxterstars.neocities.org</span>
+            <span>MONOCHROMATIC</span>
+            <span>ALLERGIC TO COLOUR</span>
+            <a href="">egg</a>
+        </div>
+    </div>
+    <!-- Main Content -->
+    <div class="content">
+        {{ content | safe }}
+    </div>
+    <!-- Bottom Bar -->
+    <div class="bottom-bar">
+        a
+    </div>
+</div>
+<audio id="mySound" style="display: none" preload="auto">
+    <source src="https://files.catbox.moe/bc2t8s.mp3" type="audio/mpeg" />
+    <script src="js/musicplayer.js"></script>
 </audio>
-  </body>
+</body>
+
 </html>
 
 <!-- Box Template -->
- 

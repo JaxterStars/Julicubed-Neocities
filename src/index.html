@@ -6,32 +6,7 @@ style: /css/index.css
 <div class="index-content">
     <!-- Left Sidebar -->
     <div class="sidebar-l">
-        <!-- profile -->
-        <div class="box profile" style="margin-top: 0px;">
-            <div class="box-title">
-                <span>PROFILE</span>
-            </div>
-            <div class="box-content">
-                <div class="profile-content">
-                    <div class="profile-picture">
-                        <img src="/img/Index/pfp.png">
-                    </div>
-                    <div class="about-me">
-                        <span>Julian | 21 | Any Pronouns</span>
-                    </div>
-                    <div class="textbox">
-                        <p>Hello there, my name is Julian. I'm from Scotland and made this site to have my own personal
-                            space on the internet.</p>
-                    </div>
-                    <div class="socials">
-                        <a href="">> Twitter</a>
-                        <a href="">> Bluesky</a>
-                        <a href="">> Tumblr</a>
-                        <a href="">> Gamebanana</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% include "../_partials/profile.njk" %}
         <!-- RSS -->
         <div class="box rss-box">
             <div class="box-title">

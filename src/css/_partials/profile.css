@@ -1,0 +1,44 @@
+
+.profile-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.profile-picture {
+    border: 1px solid;
+    width: 100%;
+    
+    height: 100%;
+}
+.profile-picture img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about-me {
+    border: 1px solid;
+    width: 100%;
+    text-align: center;
+    padding: 1px;
+    word-wrap: break-word;
+}
+
+.socials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    width: 100%; 
+}
+
+.socials a {
+    background-color: var(--button-color);
+    display: block;
+    clip-path: polygon(0 0, 95% 0%, 100% 40%, 100% 100%, 0 100%);
+    padding: 0px 5px;
+}
+
+.socials a:hover {
+    background-color: var(--button-color-hover)
+}

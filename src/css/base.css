@@ -67,6 +67,19 @@ a {
 h1, p {
     margin: 1px
 }
+.textbox {
+    border: 1px solid ;
+    padding: 5px;
+    word-wrap: break-word;
+    width: 100%;
+}
+
+.textbox h1 {
+    background-color: var(--h1);
+    padding: 3px;
+    width: 100%;
+    font-size: 1rem;
+}
 /* Main End */
 
 .wrap {
