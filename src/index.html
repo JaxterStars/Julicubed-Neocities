@@ -115,9 +115,9 @@ style: /css/index.css
             </div>
             <div class="box-content">
                 <div class="blog-entry">
-                    <a href="">08/08/26 - SAMPLE BLOG</a>
-                    <a href="">08/08/26 - SAMPLE BLOG</a>
-                    <a href="">08/08/26 - SAMPLE BLOG</a>
+                {% for post in collections.post reversed limit:3 %}
+                <a href="{{post.url}}">{{ post.data.title }} - {{ post.date | niceDate }}</h1>
+                {% endfor %}
                 </div>
             </div>
         </div>
@@ -191,14 +191,9 @@ style: /css/index.css
             </div>
             <div class="box-content">
                 <div class="status-block">
-                    <span>[1/8/26] Pink theme added.</span>
-                    <span>[19/6/26] RSS feed and blog tags added.</span>
-                    <span>[17/6/26] Grape theme added.</span>
-                    <span>[16/6/26] Website version 2.0 released!</span>
-                    <span>[12/6/26] Work on website overhaul</span>
-                    <span>[??/12/25] Release website to neocities!</span>
-                    <span>[7/12/25] Continue work on website</span>
-                    <span>[5/12/25] Began work on website</span>
+                    {% for updates in collections.updates reversed%}
+                    <span>[{{ updates.date | niceDate }}] {{ updates.templateContent | raw }}</span>
+                    {% endfor %}
                 </div>
 
             </div>

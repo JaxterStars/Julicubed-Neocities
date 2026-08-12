@@ -1,6 +1,9 @@
 import pluginRss from "@11ty/eleventy-plugin-rss";
+import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 
 export default function (eleventyConfig) {
+  
+	eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(pluginRss);
 
   eleventyConfig.addPassthroughCopy("./src/css");
@@ -26,25 +29,21 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("niceDate", function (d) {
     return english.format(d);
   });
-
+  
   eleventyConfig.addCollection("categories", function (collectionApi) {
     let categories = new Set();
     let posts = collectionApi.getFilteredByTag('post');
     posts.forEach(p => {
-      let cats = p.data.categories;
+      let cats = p.data.categories || [];
       cats.forEach(c => categories.add(c));
     });
     return Array.from(categories);
   });
 
   eleventyConfig.addFilter("filterByCategory", function (posts, cat) {
-    /*
-    case matters, so let's lowercase the desired category, cat
-    and we will lowercase our posts categories
-    */
     cat = cat.toLowerCase();
     let result = posts.filter(p => {
-      let cats = p.data.categories.map(s => s.toLowerCase());
+      let cats = p.data.categories?.map(s => s.toLowerCase()) || [];
       return cats.includes(cat);
     });
     return result;

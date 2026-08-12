@@ -162,7 +162,8 @@
 }
 
 .status-block span {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     background-color: var(--box-subcontent-color);
     padding:2px;

@@ -3,6 +3,8 @@ title:  Major website overhaul, and plans for the future.
 date: 2026-06-26
 categories: ["update"]
 tags: post
+eleventyNavigation:
+  key: post
 ---
 
 As you may have noticed, this website has just gotten a huge redesign! I initially made this website in December but differing factors such as College and the website I designed having major design flaws (the css was a mess) I neglected it right after making it.
