@@ -55,9 +55,9 @@ style: /css/index.css
             </div>
             <div class="box-content">
                 <div class="status-block">
-                    <span>[18/6/26] Wrapping my head around RSS is hard..</span>
-                    <span>[16/6/26] GRAHHHH THE SITES OUT</span>
-                    <span>[13/6/26] working on the sites been so awesome and cool....</span>
+                    {% for status in collections.status reversed%}
+                    <span>[{{ status.date | niceDate }}] {{ status.templateContent | raw }}</span>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -127,10 +127,10 @@ style: /css/index.css
                 <span>ART - LATEST</span>
             </div>
             <div class="box-content art">
-                <img src="/img/Index/latest-1.jpg">
-                <img src="/img/Index/latest-2.jpg">
-                <img src="/img/Index/latest-3.jpg">
-                <img src="/img/Index/latest-4.jpg">
+        {% for post in collections.art | reverse %}
+        <a href="{{ post.url }}"><img src="/img/art/thumbnails/{{ post.data.thumbnail }}" loading="lazy" /></a> {{
+        post.data.dateString }}
+        {% endfor %}
             </div>
         </div>
         <!-- Latest Review -->

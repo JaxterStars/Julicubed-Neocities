@@ -1,0 +1,12 @@
+.guest-content {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 780px) {
+    .guest-content {
+        display: flex;
+        padding: unset;
+    }
+}

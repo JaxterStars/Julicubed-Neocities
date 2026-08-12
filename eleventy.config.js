@@ -30,6 +30,14 @@ export default function (eleventyConfig) {
     return english.format(d);
   });
   
+  eleventyConfig.addCollection("status", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("./src/status/*.md");
+  });
+
+  eleventyConfig.addCollection("updates", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("./src/update/*.md");
+  });
+
   eleventyConfig.addCollection("categories", function (collectionApi) {
     let categories = new Set();
     let posts = collectionApi.getFilteredByTag('post');

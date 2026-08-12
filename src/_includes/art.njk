@@ -1,6 +1,7 @@
 ---
-style: /css/post.css
+style: /css/art.css
 layout: base.njk
+permalink: "/art/"
 ---
 <div class="post-content">
   <div class="box" style="margin:unset;">
@@ -11,10 +12,6 @@ layout: base.njk
       <h1>{{ title }}</h1>
       <p>
         <strong>Posted: </strong> {{ date | niceDate }}<br />
-        <strong>Categories:</strong>
-        {% for cat in categories %}
-          <a href="/categories/{{ cat | slugify }}/">{{ cat }}</a>
-        {% endfor %}
       </p>
       <article>{{ content | safe }}</article>
     </div>

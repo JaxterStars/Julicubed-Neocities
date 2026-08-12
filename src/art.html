@@ -1,0 +1,13 @@
+---
+title: Hello World!
+layout: /base.njk
+style: /css/art.css
+---
+<div class="guest-content">
+    <div class="gallery">
+        {% for post in collections.art | reverse %}
+        <a href="{{ post.url }}"><img src="/img/art/thumbnails/{{ post.data.thumbnail }}" loading="lazy" /></a> {{
+        post.data.dateString }}
+        {% endfor %}
+    </div>
+</div>
