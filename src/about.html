@@ -4,6 +4,7 @@ layout: /base.njk
 style: /css/about.css
 partialsCSS:
 - /css/_partials/profile.css
+- /css/_partials/media.css
 ---
 <div class="about-content">
     <div class="sidebar-m">
@@ -19,7 +20,8 @@ partialsCSS:
     <div class="sidebar-r">
 
         {% include "../_partials/profile.njk" %}
-        <div class="box" style="margin:unset;">
+        {% include "../_partials/media.njk" %}
+        <div class="box">
             <div class="box-title">
                 <span>ABOUT</span>
             </div>

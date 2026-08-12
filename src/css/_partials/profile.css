@@ -42,3 +42,24 @@
 .socials a:hover {
     background-color: var(--button-color-hover)
 }
+
+@media (max-width: 780px) {
+    .profile-picture {
+        order:1;
+        width: 100%;
+    }
+    .about-me {
+        grid-column: span 2 / span 2;
+        order:3;
+    }
+    .socials {
+        grid-column: span 2 / span 2;
+        order:4
+    }
+    .profile-content {
+        display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    }
+
+}
