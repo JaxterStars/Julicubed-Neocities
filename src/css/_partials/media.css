@@ -2,7 +2,7 @@
 .media {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 0.25rem;
     width: 100%;
 }
 
@@ -13,5 +13,5 @@
     background-color: var(--box-subcontent-color);
     border-left: var(--box-subcontent-border);
     width: 100%;
-    padding: 2px;
+    padding: 0.125rem;
 }

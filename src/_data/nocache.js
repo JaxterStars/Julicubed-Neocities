@@ -1,0 +1,1 @@
+export default () => "?nocache=" + Date.now();

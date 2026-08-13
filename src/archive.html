@@ -1,9 +1,10 @@
 ---
 layout: /base.njk
 style: /css/blog.css
+title: Julicubed - Archive
 pagination:
   data: collections.post
-  size: 10
+  size: 3
   alias: posts
   reverse: true
 ---
@@ -13,7 +14,7 @@ pagination:
             <span>ARCHIVE</span>
         </div>
         <div class="box-content blog-post">
-            {% for post in collections.post reversed %}
+            {% for post in posts reversed %}
             <h1>{{ post.data.title }} - {{ post.date | niceDate }}</h1>
             {% excerpt post %} <a href="{{post.url}}">read more</a>
             {% endfor %}

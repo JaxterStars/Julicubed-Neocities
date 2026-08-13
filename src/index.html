@@ -1,5 +1,5 @@
 ---
-title: Hello World!
+title: Julicubed
 layout: /base.njk
 style: /css/index.css
 partialsCSS:
@@ -11,21 +11,21 @@ partialsCSS:
     <div class="sidebar-l">
         {% include "../_partials/profile.njk" %}
         <!-- RSS -->
-        <div class="box rss-box">
+        <section class="box rss-box">
             <div class="box-title">
                 <span>RSS</span>
             </div>
             <div class="box-content rss-content">
-                <a href="" class="rss">
-                    <img src="/img/Index/rss.svg">
+                <a href="/updates.xml" class="rss">
+                    <img src="/img/Index/rss.svg" alt="RSS">
                     <span>Site Updates</span>
                 </a>
-                <a href="" class="rss">
-                    <img src="/img/Index/rss.svg">
+                <a href="/feed.xml" class="rss">
+                    <img src="/img/Index/rss.svg" alt="RSS">
                     <span>Blog Posts</span>
                 </a>
             </div>
-        </div>
+        </section>
         <!-- STATUS -->
         <div class="box status-box">
             <div class="box-title">
@@ -34,7 +34,7 @@ partialsCSS:
             <div class="box-content">
                 <div class="status-block">
                     {% for status in collections.status reversed %}
-                    <span>[{{ status.date | niceDate }}] {{ status.templateContent | raw }}</span>
+                    <span><p>[{{ status.date | niceDate }}]</p> {{ status.templateContent | raw }}</span>
                     {% endfor %}
                 </div>
             </div>
@@ -76,13 +76,11 @@ partialsCSS:
                 </div>
                 <div class="textbox welcome-box2">
                     <h1>CONTACT</h1>
-                    <p>You can find my contact details in various places around this site such as the about page or the
-                        socials I have listed on the left side of this page.</p>
+                    <p>You can find my contact details in various places around this site such as the about page.</p>
                 </div>
                 <div class="textbox welcome-box3">
                     <h1>ROADMAP</h1>
                     <p>This site is far from complete, and I am currently finishing up the website overhaul.</p>
-                    <p>I am planning on adding more acessibility features.</p>
                 </div>
             </div>
         </div>
@@ -118,12 +116,10 @@ partialsCSS:
             </div>
             <div class="box-content">
                 <div class="review">
-                    <img src="/img/Index/review.jpg">
+                    <img src="/img/Index/review.jpg" alt="Screenshot of Splatoon Raiders">
                     <div class="textbox textbox-review">
-                        <h1>SPLATOON RAIDERS</h1>
-                        <p>Splatoon raiders, the first spinoff in the series has released. is it any good?</p>
-                        <a href="">> Read</a>
-                        <a href="https://www.youtube.com/watch?v=M2_RGzOPfgA" target="_blank">> Trailer</a>
+                        <h1>COMING SOON</h1>
+                        <p>Reviws are in the process of being made. Please come later...</p>
                     </div>
                 </div>
             </div>
@@ -136,7 +132,7 @@ partialsCSS:
                     <span>PIC OF THE DAY</span>
                 </div>
                 <div class="box-content pic">
-                    <img src="/img/Index/pic-of-the-day.jpg" style="height: 150px;">
+                    <img src="/img/Index/pic-of-the-day.jpg" style="height: 150px;" alt="Fredd Durst">
                 </div>
             </div>
             <!-- Webrings -->
@@ -170,7 +166,7 @@ partialsCSS:
             <div class="box-content">
                 <div class="status-block">
                     {% for updates in collections.updates reversed %}
-                    <span>[{{ updates.date | niceDate }}] {{ updates.templateContent | raw }}</span>
+                    <span><p>[{{ updates.date | niceDate }}]</p> {{ updates.templateContent | raw }}</span>
                     {% endfor %}
                 </div>
 
@@ -184,7 +180,7 @@ partialsCSS:
             <div class="box-content">
                 <div class="button">
                     <a href="">
-                        <img src="/img/button.png">
+                        <img src="/img/button.png" alt="Julicubed's Button">
                     </a>
                     <textarea style="resize: none; width: 100%;font-size: 10px;"
                         readonly="">&lt;a href="https://jaxterstars.neocities.org" target="_blank"&gt;&lt;img src="https://jaxterstarsneocities.org/img/button.png"&gt;&lt;/a&gt;</textarea>
@@ -198,9 +194,9 @@ partialsCSS:
             </div>
             <div class="box-content friends">
                 <a href="https://cleggs.neocities.org" class="button-icon" target="_blank"><img
-                        src="/img/neighbors/cleggsbutton.gif"> <span>CLEGGS</span></a>
-                <a href="" class="button-icon" target="_blank"><img src="/img/Index/button.png"> <span>????</span></a>
-                <a href="" class="button-icon" target="_blank"><img src="/img/Index/button.png"> <span>????</span></a>
+                        src="/img/neighbors/cleggsbutton.gif"  alt="Cleggs's Button"> <span>CLEGGS</span></a>
+                <a href="" class="button-icon" target="_blank"><img src="/img/Index/button.png" alt=""> <span>????</span></a>
+                <a href="" class="button-icon" target="_blank"><img src="/img/Index/button.png" alt=""> <span>????</span></a>
             </div>
         </div>
         <!-- Featured Game -->
@@ -210,10 +206,9 @@ partialsCSS:
             </div>
             <div class="box-content pic">
                 <a href="https://store.steampowered.com/app/650700/Yume_Nikki/" target="_blank">
-                    <img src="/img/Index/featured-game.jpg" style="height: 300px;">
+                    <img src="/img/Index/featured-game.jpg" style="height: 300px;" alt="Yume Nikki">
                 </a>
             </div>
         </div>
     </div>
-
 </div>

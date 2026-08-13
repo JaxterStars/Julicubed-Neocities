@@ -61,7 +61,7 @@
 }
 
 #c_widget button, #c_widget input[type=submit] {
-    padding: 4px;
+    padding: 0.25rem;
     text-decoration: none;
 	text-align: center;
     text-transform: uppercase;
@@ -78,8 +78,8 @@
 
 /* Input section */
 #c_inputDiv {
-    margin-bottom: 4px;
-    padding: 10px;
+    margin-bottom: 0.25rem;
+    padding: 0.625rem;
     background-color: var(--box-content-color);
     border: 1px solid;
 }
@@ -87,15 +87,15 @@
 #c_widgetTitle {
     text-decoration: underline;
     color: white;
-    margin: -10px;
-    margin-bottom: 10px;
-    padding: 5px;
+    margin: -0.625rem;
+    margin-bottom: 0.625rem;
+    padding: 0.3125rem;
     text-transform: uppercase;
     font-style: italic;
     font-weight: bold;
     background: var(--dither-gradient);
     background-blend-mode: multiply;
-    background-size: 50px, auto;
+    background-size: 3.125rem, auto;
     font-size: 1rem;
 }
 
@@ -103,7 +103,7 @@
     display: block;
 }
 .c-input {
-    padding: 4px;
+    padding: 0.25rem;
     color: black;
     border: 1px solid #2D0B52;
 	outline: none;
@@ -127,33 +127,33 @@
 /* Comment section */
 .c-comment {
     color: white;
-    margin-bottom: 4px;
+    margin-bottom: 0.25rem;
     border: 1px black solid;
     background: var(--dither-gradient);
     background-blend-mode: multiply;
-    background-size: 50px, auto;
+    background-size: 3.125rem, auto;
 }
 .c-reply {
     display: block;
     width: 90%;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     margin-left: auto;
     margin-right: 0;
     border: 1px black solid;
     background: var(--dither-gradient);
     background-blend-mode: multiply;
-    background-size: 50px, auto;
+    background-size: 3.125rem, auto;
 }
 .c-reply:last-child {margin-bottom: 0;}
 .c-replyContainer {
-    margin-top: 10px;
+    margin-top: 0.625rem;
     background-color: var(--box-content-color);
 }
 
 .c-name {
     display: inline-block;
     margin: 0;
-    padding: 5px;
+    padding: 0.3125rem;
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: underline;
@@ -166,14 +166,14 @@
 }
 .c-site:hover {color: white;}
 .c-timestamp {
-    padding-top: 5px;
-    padding-right: 4px;
+    padding-top: 0.3125rem;
+    padding-right: 0.25rem;
     float: right;
     opacity: 75%;
 }
 .c-text {
     margin: 0;
-    padding: 10px;
+    padding: 0.625rem;
     text-align: justify;
     background-color: var(--box-content-color);
     color: black;
@@ -184,14 +184,14 @@
 /* Pagination */
 #c_pagination {text-align: center;}
 .c-replyButton {
-    margin: 4px;
+    margin: 0.25rem;
 }
 .c-expandButton {
-    margin: 4px;
+    margin: 0.25rem;
 }
 .c-paginationButton {
-    margin-right: 4px;
-    margin-left: 4px;
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
 }
 .c-label {
     width: 100%;
@@ -199,17 +199,17 @@
     
 }
 .c-nameLabel {
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
     background-color: var(--h1);
-    padding: 3px;
+    padding: 0.1875rem;
     width: 100%;
 }
 .c-websiteLabel {
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
     background-color: var(--h1);
-    padding: 3px;
+    padding: 0.1875rem;
     width: 100%;
 }
 .c_textWrapper {

@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="{{ style }}">
+    <link rel="stylesheet" href="/css/base.css{{ nocache }}">
+    <link rel="stylesheet" href="{{ style }}{{ nocache }}">
     {% if partialsCSS %}
     {% for cssPath in partialsCSS %}
-    <link rel="stylesheet" href="{{ cssPath }}">
+    <link rel="stylesheet" href="{{ cssPath }}{{ nocache }}">
     {% endfor %}
     {% endif %}
     <title>{{ title }}</title>
@@ -33,63 +33,66 @@
 </div>
 <div class="wrap">
     <!-- Top Bar -->
-    <div class="top-bar">
+    <header class="top-bar">
         <span>jaxterstars.neocities.org</span>
-    </div>
+    </header>
     <!-- Banner -->
-    <div class="banner">
-    </div>
+    <header class="banner">
+    </header>
     <!-- Marquee - Mobile -->
     <div class="text-scroll text-scroll-mobile">
         <div class="text-scroll-content">
-            <span>THE BEES KNEES</span>
-            <span>jaxterstars.neocities.org</span>
-            <span>MONOCHROMATIC</span>
-            <span>ALLERGIC TO COLOUR</span>
-            <a href="">egg</a>
+            <span>SBLAST IS MY FAVOURITE GUY</span>
+            <span>NO COLOR ALLOWED</span>
+            <span>POWERED BY NEOCITIES</span>
+            <span>WATCH MOB PYSCHO 100</span>
+            <a href="/man/"><p></p></a>
+            <span>OK MAYBE SOME COLOR SOMETIMES</span>
         </div>
         <div class="text-scroll-content">
-            <span>THE BEES KNEES</span>
-            <span>jaxterstars.neocities.org</span>
-            <span>MONOCHROMATIC</span>
-            <span>ALLERGIC TO COLOUR</span>
-            <a href="">egg</a>
+            <span>SBLAST IS MY FAVOURITE GUY</span>
+            <span>NO COLOR ALLOWED</span>
+            <span>POWERED BY NEOCITIES</span>
+            <span>WATCH MOB PYSCHO 100</span>
+            <a href="/man/"><p></p></a>
+            <span>OK MAYBE SOME COLOR SOMETIMES</span>
         </div>
     </div>
     <!-- Navigation -->
-    <div class="nav">
+    <nav class="nav">
         <a href="/">>>HOME</a>
         <a href="/about/">>>ABOUT</a>
         <a href="/art/">>>ART</a>
         <a href="/blog/">>>BLOG</a>
         <a href="/guest-book/">>>GUEST</a>
         <a href="/links/#personal">>>LINKS</a>
-    </div>
+    </nav>
     <!-- Marquee -->
     <div class="text-scroll">
         <div class="text-scroll-content">
-            <span>THE BEES KNEES</span>
-            <span>jaxterstars.neocities.org</span>
-            <span>MONOCHROMATIC</span>
-            <span>ALLERGIC TO COLOUR</span>
-            <a href="">egg</a>
+            <span>SBLAST IS MY FAVOURITE GUY</span>
+            <span>NO COLOR ALLOWED</span>
+            <span>POWERED BY NEOCITIES</span>
+            <span>WATCH MOB PYSCHO 100</span>
+            <a href="/man/"><p></p></a>
+            <span>OK MAYBE SOME COLOR SOMETIMES</span>
         </div>
         <div class="text-scroll-content">
-            <span>THE BEES KNEES</span>
-            <span>jaxterstars.neocities.org</span>
-            <span>MONOCHROMATIC</span>
-            <span>ALLERGIC TO COLOUR</span>
-            <a href="">egg</a>
+            <span>SBLAST IS MY FAVOURITE GUY</span>
+            <span>NO COLOR ALLOWED</span>
+            <span>POWERED BY NEOCITIES</span>
+            <span>WATCH MOB PYSCHO 100</span>
+            <a href="/man/"><p></p></a>
+            <span>OK MAYBE SOME COLOR SOMETIMES</span>
         </div>
     </div>
     <!-- Main Content -->
     <div class="content">
         {{ content | safe }}
     </div>
-    <!-- Bottom Bar -->
-    <div class="bottom-bar">
-        a
-    </div>
+    <footer class="bottom-bar">
+        <span>est. 2023 | Website ver. 3.0</span>
+    </footer>
 </div>
 <audio id="mySound" style="display: none" preload="auto">
     <source src="https://files.catbox.moe/bc2t8s.mp3" type="audio/mpeg" />

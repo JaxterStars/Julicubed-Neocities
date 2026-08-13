@@ -2,11 +2,11 @@
 .profile-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 0.25rem;
 }
 
 .profile-picture {
-    border: 1px solid;
+    border: 0.0625rem solid;
     width: 100%;
     
     height: 100%;
@@ -18,17 +18,17 @@
     object-fit: cover;
 }
 .about-me {
-    border: 1px solid;
+    border: 0.0625rem solid;
     width: 100%;
     text-align: center;
-    padding: 1px;
+    padding: 0.0625rem;
     word-wrap: break-word;
 }
 
 .socials {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5px;
+    gap: 0.3125rem;
     width: 100%; 
 }
 
@@ -36,7 +36,6 @@
     background-color: var(--button-color);
     display: block;
     clip-path: polygon(0 0, 95% 0%, 100% 40%, 100% 100%, 0 100%);
-    padding: 0px 5px;
 }
 
 .socials a:hover {

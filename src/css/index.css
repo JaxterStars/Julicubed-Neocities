@@ -5,7 +5,9 @@
     padding: 10px;
     gap: 10px;
 }
-
+.widget-hc {
+    font:unset
+}
 /* Middle content */
 .welcome-content {
     display: grid;
@@ -22,7 +24,7 @@
 .two-split {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 4px;
+    gap: 0.25rem;
     width: 100%;
 }
 
@@ -30,30 +32,17 @@
     width: 100%;
 }
 
-.textbox {
-    border: 1px solid ;
-    padding: 5px;
-    word-wrap: break-word;
-    width: 100%;
-}
-
-.textbox h1 {
-    background-color: var(--h1);
-    padding: 3px;
-    width: 100%;
-    font-size: 1rem;
-}
 .blog-entry {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 0.25rem;
 }
 
 .blog-entry a {
     background-color: var(--button-color);
     border-left: var(--box-subcontent-border);
     display: block;
-    padding: 1px;
+    padding: 0.0625rem;
     width: 100%;
 }
 
@@ -64,7 +53,7 @@
 .review {
     display: grid;
     grid-template-columns: 1fr 60%;
-    gap: 1px;
+    gap: 0.0625rem;
 }
 
 .review img {
@@ -74,9 +63,7 @@
 }
 
 .textbox-review {
-    overflow: auto;
-    display: flex;
-    flex-wrap: wrap;
+    overflow:unset;
 }
 
 .textbox-review p {
@@ -85,26 +72,21 @@
 
 .textbox-review a {
     justify-content: flex-end;
-    padding: 0px 5px;
+    padding: 0rem 0.3125rem;
     text-decoration: underline;
 }
 .art {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 4px;
+    gap: 0.25rem;
 }
 
 .art img {
     width: 100%;
     border: 1px solid;
-    filter: grayscale();
     
 }
 
-.art img:hover {
-    filter: unset;
-    filter: saturate(50%)
-}
 
 /* Middle content end */
 
@@ -114,7 +96,7 @@
     background-color: var(--button-color);
     display: block;
     clip-path: polygon(0 0, 95% 0%, 100% 40%, 100% 100%, 0 100%);
-    padding: 0px 5px;
+    padding: 0rem 0.3125rem;
 }
 
 .socials a:hover {
@@ -123,8 +105,8 @@
 .status-block {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
-    max-height: 140px;
+    gap: 0.25rem;
+    max-height: 8.75rem;
     overflow: auto;
 }
 
@@ -133,23 +115,23 @@
     flex-wrap: wrap;
     width: 100%;
     background-color: var(--box-subcontent-color);
-    padding:2px;
-    border-left: var(--box-subcontent-border)
+    border-left: var(--box-subcontent-border);
+    padding-top: 0.25rem;
 }
 
 .rss-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 0.25rem;
 }
 
 .rss {
     display: flex;
     flex-wrap: wrap;
     background-color: var(--button-color);
-    padding: 3px;
+    padding: 0.1875rem;
     align-items: center;
-    gap: 4px;
+    gap: 0.25rem;
     border-left: var(--box-subcontent-border);
 }
 
@@ -173,22 +155,20 @@
 .friends {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 0.25rem;
 }
 
 .button-icon {
-    filter: grayscale();
     display: flex;
     flex-wrap: wrap;
     justify-content:space-around;
     background-color: var(--button-color);
-    padding: 4px;
+    padding: 0.25rem;
     width: 100%;
     border-left: var(--box-subcontent-border);
 }
 
 .button-icon:hover {
-    filter: unset;
     background-color: var(--button-color-hover);
 }
 
@@ -199,11 +179,16 @@
 
 .stats {
     background-color: var(--box-subcontent-color);
-    padding:2px;
+    padding:0.125rem;
     width: 100%;
     display: block;
     border-left: var(--box-subcontent-border);
 
+}
+.status-block p {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: .9rem;
 }
 /* Right content end */
 

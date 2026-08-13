@@ -15,6 +15,8 @@
     --banner-bg: url(/img/Index/banner.jpg);
     --bg-image: url(/img/Index/BG.jpg);
     --bg-color:rgb(48, 48, 48);
+    --font: "Saitamaar";
+    --footer: rgb(63, 63, 63);
 }
 
 /* FONTS  */
@@ -37,9 +39,18 @@ src: url('/fonts/04B_31__.TTF') format("truetype");
 font-family: "04b11";
 src: url('/fonts/04B_11__.TTF') format("truetype");
 }
+
+@font-face {
+font-family: "OpenDyslexic";
+src: url('/fonts/OpenDyslexic-Regular.otf') format("opentype");
+}
+
 /* FONTS END */
 
 /* Main */
+html {
+    font-size: 1.2rem
+}
 * {
     box-sizing: border-box;
     image-rendering: pixelated;
@@ -51,11 +62,10 @@ body {
     background-repeat: no-repeat;
     background-color: var(--bg-color);
     background-blend-mode: screen;
-    cursor: url(/img/cursor/normal\ Select.png), auto;
     font-size: 1rem;
     line-height: 1.1;
-    margin: 0;
-    font-family: 'Saitamaar';
+    font-family: var(--font);
+    cursor: url(/img/cursor/normal\ Select.png), auto;
     
 }
 a {
@@ -64,19 +74,29 @@ a {
     color: black;
     cursor: url(/img/cursor/link\ Select.png), auto;
 }
-h1, p {
-    margin: 1px
+p {
+    margin: 0.3125rem;
+}
+img {
+    filter: grayscale();
+}
+img:hover {
+    filter: unset;
+}
+h1, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 0.1875rem;
 }
 .textbox {
     border: 1px solid ;
-    padding: 5px;
     word-wrap: break-word;
     width: 100%;
+    padding: 0.25rem;
 }
 
 .textbox h1 {
     background-color: var(--h1);
-    padding: 3px;
+    padding: 0.1875rem;
     width: 100%;
     font-size: 1rem;
 }
@@ -85,23 +105,34 @@ h1, p {
 .wrap {
     background-color: var(--wrap-color);
     width: 100%;
-    max-width: 1024px;
+    max-width: 64rem;
     margin: auto;
-    border: 2px solid;
+    border: 0.125rem solid;
 }
 
 .top-bar {
     background:  var(--dither-gradient);
     background-blend-mode: multiply;
-    background-size: 50px, auto;
+    background-size: 3.125rem, auto;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid;
-    padding: 3px;
+    padding: 0.1875rem;
+}
+.top-bar span {
+    color: white;
+}
+.bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.1875rem;
+}
+.bottom-bar span {
+    color: white;
 }
 
 .banner {
-    min-height: 150px;
+    min-height: 9.375rem;
     background-color: rgb(152, 152, 152);
     border-bottom: 1px solid;
     background: var(--banner-bg);
@@ -113,17 +144,17 @@ h1, p {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     border-bottom: 1px solid;
-    gap: 1px;
+    gap: 0.0625rem;
 }
 
 .nav a {
     display: block;
     margin: auto;
     font-family: '04b31';
-    font-size: 12px;
+    font-size: 0.75rem;
     width: 100%;
     background-color: var(--nav-color);
-    padding: 2px 8px;
+    padding: 0.125rem 0.5rem;
     text-align: center;
 }
 
@@ -134,7 +165,7 @@ h1, p {
 /* Marquee */
 .text-scroll {
     --gap: 1rem;
-    border-bottom: 1px solid;
+    border-bottom: 0.0625rem solid;
     overflow: hidden;
     display: flex;
     gap: var(--gap);
@@ -162,7 +193,7 @@ h1, p {
 
 /* Box */
 .box {
-    margin-top: 10px;
+    margin-top: 0.625rem;
     border: 1px solid;
     width: 100%;
 }
@@ -170,8 +201,8 @@ h1, p {
 .box-title {
     background: var(--dither-gradient);
     background-blend-mode: multiply;
-    background-size: 50px, auto;
-    padding: 2px 5px;
+    background-size: 3.125rem, auto;
+    padding: 0.125rem 0.3125rem;
     border-bottom: 1px solid;
     font-style: italic;
     font-size: 1rem;
@@ -180,12 +211,11 @@ h1, p {
 }
 
 .box-title span {
-    
     text-decoration: underline;
 }
 
 .box-content {
-    padding: 8px;
+    padding: 0.5rem;
     background-color: var(--box-content-color)
 }
 /* Box end */
@@ -194,12 +224,8 @@ h1, p {
 .pic img {
     width: 100%;
     object-fit: cover;
-    filter: grayscale();
 }
 
-.pic img:hover {
-    filter: unset;
-}
 /* Pic end */
 
 .text-scroll-mobile {
@@ -209,22 +235,21 @@ h1, p {
 /* Chatroom */
 .chatroom {
     position:fixed;
-    bottom: -330px;
-    left: 1px;
+    bottom: -20.625rem;
+    left: 0.0625rem;
     z-index: 99999;
     transition:0.2s;
     filter: grayscale();
 }
 
 .chatroom:hover {
-    bottom: 20px;
+    bottom: 1.25rem;
     transition:0.2s;
-
 }
 
 .chatroom-content {
-    width: 250px;
-    height: 350px;
+    width: 15.625rem;
+    height: 21.875rem;
     background-color: rgb(115, 115, 115);
 }
 
@@ -241,7 +266,7 @@ h1, p {
 .chatroom-responsive {
     padding: 0;
     filter: grayscale();
-    height: 350px;
+    height: 21.875rem;
 }
 
 .chatroom-responsive-show {
@@ -249,6 +274,10 @@ h1, p {
 }
 /* Chatroom */
 
+.bottom-bar {
+    background-color: var(--footer);
+    border-top: black 1px solid;
+}
 @media (max-width: 1500px) {
     .chatroom {
         display: none;
@@ -258,6 +287,9 @@ h1, p {
 }
 }
 @media (max-width: 780px) {
+    body {
+        margin: 0;
+    }
     .wrap {
         max-width: 100%;
         border: 0;
@@ -276,7 +308,7 @@ h1, p {
         min-height: 25vw;
     }
     .box {
-        margin-top: 0px;
+        margin-top: 0rem;
     }
     .box-title {
         clip-path: unset;

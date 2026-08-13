@@ -1,5 +1,5 @@
 ---
-title: Hello World!
+title: Julicubed - Blog
 layout: /base.njk
 style: /css/blog.css
 ---
@@ -22,6 +22,18 @@ style: /css/blog.css
     <div class="sidebar-r">
         <div class="box" style="margin:unset">
             <div class="box-title">
+                <span>NOTE</span>
+            </div>
+            <div class="box-content">
+                <div class="textbox">
+                    <h1>BLOG</h1>
+                    <p>This is the blog section. I will be posting about various topics here.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-title">
                 <span>ARCHIVE</span>
             </div>
             <div class="box-content category">
@@ -39,17 +51,21 @@ style: /css/blog.css
             </div>
         </div>
         <!-- RSS -->
-        <div class="box rss-box">
+        <section class="box rss-box">
             <div class="box-title">
                 <span>RSS</span>
             </div>
             <div class="box-content rss-content">
-                <a href="" class="rss">
-                    <img src="/img/Index/rss.svg">
+                <a href="/updates.xml" class="rss">
+                    <img src="/img/Index/rss.svg" alt="RSS">
+                    <span>Site Updates</span>
+                </a>
+                <a href="/feed.xml" class="rss">
+                    <img src="/img/Index/rss.svg" alt="RSS">
                     <span>Blog Posts</span>
                 </a>
             </div>
-        </div>
+        </section>
 
     </div>
 </div>
