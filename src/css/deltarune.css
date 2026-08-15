@@ -27,7 +27,9 @@
 img {
     filter: unset;
 }
-
+html {
+    cursor: auto;
+}
 body {
     background-repeat: repeat;
     background-attachment: fixed;
@@ -35,7 +37,6 @@ body {
     background-size: 150px;
     background-image: url(/img/theme/deltarune/grid-1.svg), url(/img/theme/deltarune/grid-2.svg);
     animation: deltarune 160s linear infinite;
-    cursor: auto;
 }
 a {
     cursor:pointer;

@@ -51,7 +51,8 @@ src: url('/fonts/OpenDyslexic-Regular.otf') format("opentype");
 
 /* Main */
 html {
-    font-size: 1.2rem
+    font-size: 1.2rem;
+    cursor: url("/img/cursor/normal Select.png"), auto;
 }
 * {
     box-sizing: border-box;
@@ -67,14 +68,13 @@ body {
     font-size: 1rem;
     line-height: 1.1;
     font-family: var(--font);
-    cursor: url(/img/cursor/normal\ Select.png), auto;
     
 }
 a {
     
     text-decoration: none;
     color: black;
-    cursor: url(/img/cursor/link\ Select.png), auto;
+    cursor: url("/img/cursor/link Select.png"), pointer;
 }
 p {
     margin: 0.3125rem;
