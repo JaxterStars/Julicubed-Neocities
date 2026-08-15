@@ -5,7 +5,7 @@ pagination:
   alias: category
 permalink: "/categories/{{ category | slugify }}/index.html"
 layout: /base.njk
-style: /css/blog.css
+style: /css/archive.css
 eleventyComputed:
 title: "Julicubed - Category: {{ category }}"
 ---
@@ -36,5 +36,6 @@ title: "Julicubed - Category: {{ category }}"
                 Next
                 {% endif %}
             </p>
+        </div>
         </div>
         </div>

@@ -93,7 +93,8 @@
         {{ content | safe }}
     </div>
     <footer class="bottom-bar">
-        <span>est. 2023 | Website ver. 3.0</span>
+        {% set latestVer = collections.updates[collections.updates.length -1]%}
+        <span>est. 2023 | version {{ latestVer.data.version }}</span>
         <span>
             Theme:
         <select id="themeSelector" onchange="changeTheme(this.value)">

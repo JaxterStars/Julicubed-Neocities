@@ -10,6 +10,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/img");
   eleventyConfig.addPassthroughCopy("./src/fonts");
   eleventyConfig.addPassthroughCopy("./src/js");
+  eleventyConfig.addPassthroughCopy("./src/.well-known");
+  eleventyConfig.addPassthroughCopy("./src/apartment");
   // Exclude certain tags from displaying
   eleventyConfig.addFilter("exclude", (arr, exclude) => arr.filter((el) => el !== exclude));
   eleventyConfig.addFilter("limit", (arr, limit) => arr.slice(0, limit));

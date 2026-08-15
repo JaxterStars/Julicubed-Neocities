@@ -1,0 +1,37 @@
+
+.blog-post {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+.blog-post h1 {
+    background-color: var(--h1);
+    padding: 0.1875rem;
+    width: 100%;
+    font-size: 1rem;
+}
+.blog-post a {
+    text-decoration: underline;
+    margin: 0 0.3125rem 0 0.3125rem;
+}
+.archive-content {
+    padding: 0.625rem;
+    gap: 0.625rem;
+}
+
+.navigation {
+    width: 100%;
+    padding: 0.25rem;
+    justify-content: center;
+}
+
+@media (max-width: 780px) {
+    .main-content {
+        padding: unset;
+        gap: unset;
+    }
+    .main-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

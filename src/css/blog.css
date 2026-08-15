@@ -78,19 +78,10 @@
         display: flex;
         flex-wrap: wrap;
     }
-    .archive-content {
-        padding: unset;
-        gap: unset;
-    }
-    .archive-content {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .sidebar-r {
-        width: 100%;
-        order:1
+    .sidebar-l {
+        order: 1;
     }
     .sidebar-m {
-        order:2
+        order: 2;
     }
 }
