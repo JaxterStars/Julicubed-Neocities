@@ -91,17 +91,6 @@
 /* Middle content end */
 
 /* Left content */
-
-.socials a {
-    background-color: var(--button-color);
-    display: block;
-    clip-path: polygon(0 0, 95% 0%, 100% 40%, 100% 100%, 0 100%);
-    padding: 0rem 0.3125rem;
-}
-
-.socials a:hover {
-    background-color: var(--button-color-hover)
-}
 .status-block {
     display: flex;
     flex-wrap: wrap;

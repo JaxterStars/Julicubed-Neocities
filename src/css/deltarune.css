@@ -1,0 +1,151 @@
+:root {
+    --button-color: rgb(0, 0, 0);
+    --button-color-hover: rgb(0, 0, 0);
+    --wrap-color: rgb(0, 0, 0);
+    --marquee-color: rgb(0, 0, 0);
+    --nav-color: rgb(0, 0, 0);
+    --nav-color-hover: rgb(0, 0, 0);
+    --box-content-color: rgb(0, 0, 0);
+    --box-subcontent-color: rgb(0, 0, 0);
+    --box-subcontent-border: 3px rgb(255, 255, 255) solid;
+    --h1: unset;
+    --nav-color-bg: rgb(255, 255, 255);
+    --dither-gradient: black;
+    --banner-bg: url(/img/theme/deltarune/banner.jpg);
+    --bg-image: url(/img/theme/deltarune/BG.png);
+    --bg-color: rgb(0, 0, 0);
+    --font: "DeterminationMonoWeb";
+    --footer: rgb(0, 0, 0);
+    --border-color: rgb(255, 254, 254);
+    --comment-text: white;
+}
+
+@font-face {
+    font-family: "DeterminationMonoWeb";
+    src: url('/fonts/DeterminationMonoWeb.woff') format("woff");
+}
+img {
+    filter: unset;
+}
+
+body {
+    background-repeat: repeat;
+    background-attachment: fixed;
+    color: white;
+    background-size: 150px;
+    background-image: url(/img/theme/deltarune/grid-1.svg), url(/img/theme/deltarune/grid-2.svg);
+    animation: deltarune 160s linear infinite;
+    cursor: auto;
+}
+a {
+    cursor:pointer;
+}
+select {
+    color: unset;
+}
+.stats {
+    background-color: white;
+}
+@keyframes deltarune {
+    from {
+        background-position: -100% -100%, 120% 100%
+    }
+
+    to {
+        background-position: 100% 100%, -170% -150%
+    }
+}
+
+.art img {
+    border: 2px rgb(250, 125, 38) solid;
+
+}
+
+.art img:hover {
+    border: 2px rgba(253, 246, 0) solid;
+
+}
+
+a {
+    color: rgb(250, 125, 38)
+}
+
+a:hover {
+    color: rgba(253, 246, 0)
+}
+
+.box-title {
+    font-style: unset;
+}
+
+.socials a {
+    clip-path: none;
+    border: 2px rgb(250, 125, 38) solid;
+}
+
+.socials a:hover {
+    border: 2px rgba(253, 246, 0) solid;
+
+}
+
+.blog-entry a {
+    background-color: var(--button-color);
+    border: 2px rgb(250, 125, 38) solid;
+    display: block;
+    padding: 0.0625rem;
+    width: 100%;
+}
+
+.blog-entry a:hover {
+    border: 2px rgba(253, 246, 0) solid;
+}
+
+.nav a:hover {
+    border: yellow;
+}
+
+
+.rss:hover {
+    background-color: var(--button-color-hover);
+    border: 2px rgba(253, 246, 0) solid;
+}
+
+.rss {
+    border: 2px rgb(250, 125, 38) solid;
+}
+
+.rss:hover img{
+    filter: brightness(0) saturate(100%) invert(97%) sepia(90%) saturate(4666%) hue-rotate(358deg) brightness(105%) contrast(102%);
+}
+
+.rss img {
+    filter: brightness(0) saturate(100%) invert(58%) sepia(23%) saturate(3786%) hue-rotate(344deg) brightness(101%) contrast(96%);
+}
+
+.button-icon {
+    border: 2px rgb(250, 125, 38) solid;
+}
+
+.button-icon:hover {
+    border: 2px rgba(253, 246, 0) solid;
+}
+
+.nav a {
+    font-family: unset;
+    font-size: unset;
+}
+
+.category a {
+    border: 2px rgb(250, 125, 38) solid;
+}
+
+.category a:hover {
+    border: 2px rgba(253, 246, 0) solid;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body {
+        animation: none;
+        background-position: 0px 0px, 25px 25px;
+    }
+}

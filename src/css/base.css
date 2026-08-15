@@ -11,12 +11,14 @@
     --box-subcontent-border: 3px rgb(86, 86, 86) solid;
     --h1: rgb(209, 210, 210);
     --nav-color-bg: rgb(0, 0, 0);
-    --dither-gradient: url("/img/Index/dither.jpg"),linear-gradient(90deg,rgba(69, 69, 69, 1) 27%, rgba(181, 181, 181, 1) 100%);
+    --dither-gradient: url("/img/Index/dither.png"),linear-gradient(90deg,rgba(69, 69, 69, 1) 27%, rgba(181, 181, 181, 1) 100%);
     --banner-bg: url(/img/Index/banner.jpg);
-    --bg-image: url(/img/Index/BG.jpg);
+    --bg-image: url(/img/Index/BG.png);
     --bg-color:rgb(48, 48, 48);
     --font: "Saitamaar";
     --footer: rgb(63, 63, 63);
+    --border-color: black;
+    --comment-text: black;
 }
 
 /* FONTS  */
@@ -87,8 +89,16 @@ h1, h2, h3 {
     margin-top: 0;
     margin-bottom: 0.1875rem;
 }
+select {
+    font-family: unset;
+    text-align: center;
+    border: 1px var(--border-color) solid;
+    background-color: var(--box-content-color);
+}
+option {
+}
 .textbox {
-    border: 1px solid ;
+    border: 1px var(--border-color) solid ;
     word-wrap: break-word;
     width: 100%;
     padding: 0.25rem;
@@ -107,7 +117,7 @@ h1, h2, h3 {
     width: 100%;
     max-width: 64rem;
     margin: auto;
-    border: 0.125rem solid;
+    border: 0.125rem var(--border-color) solid;
 }
 
 .top-bar {
@@ -116,7 +126,7 @@ h1, h2, h3 {
     background-size: 3.125rem, auto;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid;
+    border-bottom: 1px var(--border-color) solid;
     padding: 0.1875rem;
 }
 .top-bar span {
@@ -134,16 +144,17 @@ h1, h2, h3 {
 .banner {
     min-height: 9.375rem;
     background-color: rgb(152, 152, 152);
-    border-bottom: 1px solid;
+    border-bottom: 1px var(--border-color) solid;
     background: var(--banner-bg);
     background-size: cover;
+    background-position: center;
 }
 
 .nav {
     background-color: var(--nav-color-bg);
     display: grid;
     grid-template-columns: repeat(6,1fr);
-    border-bottom: 1px solid;
+    border-bottom: 1px var(--border-color) solid;
     gap: 0.0625rem;
 }
 
@@ -165,7 +176,7 @@ h1, h2, h3 {
 /* Marquee */
 .text-scroll {
     --gap: 1rem;
-    border-bottom: 0.0625rem solid;
+    border-bottom: 0.0625rem var(--border-color) solid;
     overflow: hidden;
     display: flex;
     gap: var(--gap);
@@ -194,7 +205,7 @@ h1, h2, h3 {
 /* Box */
 .box {
     margin-top: 0.625rem;
-    border: 1px solid;
+    border: 1px var(--border-color) solid;
     width: 100%;
 }
 
@@ -203,7 +214,7 @@ h1, h2, h3 {
     background-blend-mode: multiply;
     background-size: 3.125rem, auto;
     padding: 0.125rem 0.3125rem;
-    border-bottom: 1px solid;
+    border-bottom: 1px var(--border-color) solid;
     font-style: italic;
     font-size: 1rem;
     color: white;
@@ -276,7 +287,7 @@ h1, h2, h3 {
 
 .bottom-bar {
     background-color: var(--footer);
-    border-top: black 1px solid;
+    border-top: var(--border-color) 1px solid;
 }
 @media (max-width: 1500px) {
     .chatroom {
