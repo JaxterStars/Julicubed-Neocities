@@ -1,59 +1,90 @@
 /* ROOT */
 :root {
-    --button-color: rgb(210, 210, 210);
-    --button-color-hover: rgb(168, 168, 168);
-    --wrap-color: rgba(208, 211, 211, 0.9);
-    --marquee-color:rgb(146, 146, 146);
-    --nav-color:rgb(255, 255, 255);
-    --nav-color-hover:rgb(234, 234, 234);
-    --box-content-color: rgb(249, 249, 250);
-    --box-subcontent-color: rgb(210, 210, 210);
-    --box-subcontent-border: 3px rgb(86, 86, 86) solid;
-    --h1: rgb(209, 210, 210);
+    --button-color: linear-gradient(to bottom, #8e2b2b 0%, #761f1f 35%, #650909 100%);
+    --button-color-hover: linear-gradient(to bottom, #781a1a 0%, #611111 35%, #4a0303 100%);
+    --wrap-color: rgba(32, 11, 30, 0.9);
+    --marquee-color: rgb(68, 18, 18);
+    --nav-color: rgb(105, 30, 30);
+    --nav-color-hover: rgb(39, 13, 13);
+    --box-content-color: rgb(29, 3, 3);
+    --box-subcontent-color: rgb(87, 30, 30);
+    --box-subcontent-border: 3px rgb(197, 22, 22) solid;
+    --h1: rgb(104, 18, 13);
     --nav-color-bg: rgb(0, 0, 0);
-    --dither-gradient: url("/img/Index/dither.png"),linear-gradient(90deg,rgba(69, 69, 69, 1) 27%, rgba(181, 181, 181, 1) 100%);
-    --banner-bg: url(/img/Index/banner.jpg);
-    --bg-image: url(/img/Index/BG.png);
-    --bg-color:rgb(48, 48, 48);
-    --font: "Saitamaar";
-    --footer: rgb(63, 63, 63);
-    --border-color: black;
-    --comment-text: black;
+    --dither-gradient: url("/img/Index/dither.png"), linear-gradient(180deg, rgb(152, 31, 31) 50%, rgb(73, 4, 4) 80%);
+    --banner-bg: url("/img/Index/ban.jpg");
+    --bg-image: url("/img/Index/test.jpg");
+    --bg-color: rgb(12, 10, 24);
+    --font: "helvetica";
+    --footer: rgb(63, 8, 8);
+    --border-color: rgb(197, 22, 22);
+    --comment-text: rgb(255, 255, 255);
 }
+/* :root {
+    --button-color: rgb(130, 18, 18);
+    --button-color-hover: rgb(82, 10, 10);
+    --wrap-color: rgba(32, 11, 30, 0.9);
+    --marquee-color: rgb(68, 18, 18);
+    --nav-color: rgb(105, 30, 30);
+    --nav-color-hover: rgb(39, 13, 13);
+    --box-content-color: rgb(29, 3, 3);
+    --box-subcontent-color: rgb(87, 30, 30);
+    --box-subcontent-border: 3px rgb(138, 16, 16) solid;
+    --h1: rgb(104, 18, 13);
+    --nav-color-bg: rgb(0, 0, 0);
+    --dither-gradient: url("/img/Index/dither.png"), linear-gradient(180deg, rgb(152, 31, 31) 50%, rgb(73, 4, 4) 80%);
+    --banner-bg: url("/img/Index/ban.jpg");
+    --bg-image: url(/img/Index/test.jpg);
+    --bg-color: rgb(12, 10, 24);
+    --font: "Saitamaar";
+    --footer: rgb(63, 8, 8);
+    --border-color: rgb(198, 22, 22);
+    --comment-text: rgb(255, 255, 255);
+} */
+
 
 /* FONTS  */
+
 @font-face {
-font-family: "04b03b";
-src: url('/fonts/04B_03B_.TTF') format("truetype");
+    font-family: "Saitamaar";
+    src: url('/fonts/Saitamaar-Regular.ttf') format("truetype");
 }
 
 @font-face {
-font-family: "Saitamaar";
-src: url('/fonts/Saitamaar-Regular.ttf') format("truetype");
+    font-family: "04b31";
+    src: url('/fonts/04B_31__.TTF') format("truetype");
 }
 
 @font-face {
-font-family: "04b31";
-src: url('/fonts/04B_31__.TTF') format("truetype");
-}
-
-@font-face {
-font-family: "04b11";
-src: url('/fonts/04B_11__.TTF') format("truetype");
-}
-
-@font-face {
-font-family: "OpenDyslexic";
-src: url('/fonts/OpenDyslexic-Regular.otf') format("opentype");
+    font-family: "cour";
+    src: url('/fonts/cour.ttf') format("truetype");
 }
 
 /* FONTS END */
 
+.tape {
+    width: 30%;
+    position: fixed;
+    transform: rotate(50deg);
+    top: -7vw;
+    left: 73vw;
+    z-index: -1;
+}
+
+.tape2 {
+    width: 30%;
+    position: fixed;
+    transform: rotate(75deg);
+    top: -4vw;
+    left: 77vw;
+    z-index: -1;
+}
+
 /* Main */
 html {
-    font-size: 1.2rem;
-    cursor: url("/img/cursor/normal Select.png"), auto;
+    font-size: 110%;
 }
+
 * {
     box-sizing: border-box;
     image-rendering: pixelated;
@@ -64,41 +95,41 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: var(--bg-color);
-    background-blend-mode: screen;
-    font-size: 1rem;
-    line-height: 1.1;
+    background-attachment: fixed;
+    font-size: 0.875rem;
+    line-height: 1.4;
     font-family: var(--font);
-    
+    color: white;
+
 }
+
 a {
-    
+
     text-decoration: none;
-    color: black;
-    cursor: url("/img/cursor/link Select.png"), pointer;
+    color: white;
 }
+
 p {
     margin: 0.3125rem;
 }
-img {
-    filter: grayscale();
-}
-img:hover {
-    filter: unset;
-}
-h1, h2, h3 {
+
+h1,
+h2,
+h3 {
     margin-top: 0;
     margin-bottom: 0.1875rem;
 }
+
 select {
     font-family: unset;
     text-align: center;
     border: 1px var(--border-color) solid;
     background-color: var(--box-content-color);
+    color: white;
 }
-option {
-}
+
 .textbox {
-    border: 1px var(--border-color) solid ;
+    border: 1px var(--border-color) solid;
     word-wrap: break-word;
     width: 100%;
     padding: 0.25rem;
@@ -110,18 +141,20 @@ option {
     width: 100%;
     font-size: 1rem;
 }
+
 /* Main End */
 
 .wrap {
     background-color: var(--wrap-color);
     width: 100%;
-    max-width: 64rem;
+    max-width: 57.5rem;
     margin: auto;
+    /* margin: 2.1875rem auto; */
     border: 0.125rem var(--border-color) solid;
 }
 
 .top-bar {
-    background:  var(--dither-gradient);
+    background: var(--dither-gradient);
     background-blend-mode: multiply;
     background-size: 3.125rem, auto;
     display: flex;
@@ -129,14 +162,17 @@ option {
     border-bottom: 1px var(--border-color) solid;
     padding: 0.1875rem;
 }
+
 .top-bar span {
     color: white;
 }
+
 .bottom-bar {
     display: flex;
     justify-content: space-between;
     padding: 0.1875rem;
 }
+
 .bottom-bar span {
     color: white;
 }
@@ -147,13 +183,13 @@ option {
     border-bottom: 1px var(--border-color) solid;
     background: var(--banner-bg);
     background-size: cover;
-    background-position: center;
+    background-position: right;
 }
 
 .nav {
     background-color: var(--nav-color-bg);
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
     border-bottom: 1px var(--border-color) solid;
     gap: 0.0625rem;
 }
@@ -181,7 +217,7 @@ option {
     display: flex;
     gap: var(--gap);
     background-color: var(--marquee-color);
-}           
+}
 
 .text-scroll-content {
     flex-shrink: 0;
@@ -189,22 +225,24 @@ option {
     justify-content: space-around;
     min-width: 100%;
     gap: var(--gap);
-  animation: scroll 90s linear infinite;
+    animation: scroll 90s linear infinite;
 }
 
 @keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-  }
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
 }
+
 /* Marquee end */
 
 /* Box */
 .box {
-    margin-top: 0.625rem;
+    margin-top: 0.25rem;
     border: 1px var(--border-color) solid;
     width: 100%;
 }
@@ -216,19 +254,16 @@ option {
     padding: 0.125rem 0.3125rem;
     border-bottom: 1px var(--border-color) solid;
     font-style: italic;
-    font-size: 1rem;
+    font-size: .8rem;
     color: white;
     /* clip-path: polygon(0 0, 95% 0%, 100% 40%, 100% 100%, 0 100%); */
 }
 
-.box-title span {
-    text-decoration: underline;
-}
-
 .box-content {
-    padding: 0.5rem;
+    padding: 0.25rem;
     background-color: var(--box-content-color)
 }
+
 /* Box end */
 
 /* Pic */
@@ -245,23 +280,22 @@ option {
 
 /* Chatroom */
 .chatroom {
-    position:fixed;
+    position: fixed;
     bottom: -20.625rem;
     left: 0.0625rem;
     z-index: 99999;
-    transition:0.2s;
-    filter: grayscale();
+    transition: 0.2s;
 }
 
 .chatroom:hover {
     bottom: 1.25rem;
-    transition:0.2s;
+    transition: 0.2s;
 }
 
 .chatroom-content {
     width: 15.625rem;
     height: 21.875rem;
-    background-color: rgb(115, 115, 115);
+    background-color: var(--box-content-color);
 }
 
 .chatroom-title {
@@ -270,8 +304,8 @@ option {
     text-decoration: none;
 }
 
-.chatroom-title a{
-    color:white;
+.chatroom-title a {
+    color: white;
 }
 
 .chatroom-responsive {
@@ -283,50 +317,64 @@ option {
 .chatroom-responsive-show {
     display: none;
 }
+
 /* Chatroom */
 
 .bottom-bar {
     background-color: var(--footer);
     border-top: var(--border-color) 1px solid;
 }
+
+
 @media (max-width: 1500px) {
     .chatroom {
         display: none;
     }
-.chatroom-responsive-show {
-    display: block;
+
+    .chatroom-responsive-show {
+        display: block;
+    }
 }
-}
+
 @media (max-width: 780px) {
     body {
         margin: 0;
     }
+
     .wrap {
         max-width: 100%;
         border: 0;
-        }
+    }
+
     .nav {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
-    #linkNav{
+
+    #linkNav {
         grid-column: span 3
     }
+
     .textbox {
-        order:2;
+        order: 2;
     }
+
     .banner {
         min-height: 25vw;
     }
+
     .box {
         margin-top: 0rem;
     }
+
     .box-title {
         clip-path: unset;
     }
+
     .text-scroll {
         display: none;
     }
+
     .text-scroll-mobile {
         display: flex;
     }

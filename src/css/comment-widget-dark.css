@@ -65,12 +65,12 @@
     text-decoration: none;
 	text-align: center;
     text-transform: uppercase;
-    background-color: var(--button-color);
+    background: var(--button-color);
     border: 1px solid var(--border-color);
     color: var(--comment-text)
 }
 #c_widget button:hover, #c_widget input[type=submit]:hover {
-    background-color: var(--button-color-hover);
+    background: var(--button-color-hover);
 }
 #c_widget button:disabled, #c_widget input[type=submit]:disabled {opacity: 60%;}
 #c_widget button:disabled:hover, #c_widget input[type=submit]:disabled:hover {

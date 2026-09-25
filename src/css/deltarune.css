@@ -34,7 +34,7 @@ body {
     background-repeat: repeat;
     background-attachment: fixed;
     color: white;
-    background-size: 150px;
+    background-size: 9.375rem;
     background-image: url(/img/theme/deltarune/grid-1.svg), url(/img/theme/deltarune/grid-2.svg);
     animation: deltarune 160s linear infinite;
 }
@@ -43,6 +43,12 @@ a {
 }
 select {
     color: unset;
+}
+.tape {
+    display: none;
+}
+.tape2 {
+    display: none;
 }
 .stats {
     background-color: white;
@@ -90,7 +96,7 @@ a:hover {
 }
 
 .blog-entry a {
-    background-color: var(--button-color);
+    background: var(--button-color);
     border: 2px rgb(250, 125, 38) solid;
     display: block;
     padding: 0.0625rem;
@@ -107,7 +113,7 @@ a:hover {
 
 
 .rss:hover {
-    background-color: var(--button-color-hover);
+    background: var(--button-color-hover);
     border: 2px rgba(253, 246, 0) solid;
 }
 

@@ -18,8 +18,12 @@
     <script src="/js/sound.js"></script>
     <script src="https://u.widget.st/ar.js"></script>
     <script src="/js/themes.js"></script>
+
 </head>
 </body>
+
+<img src="/img/index/tape.png/" class="tape">
+<img src="/img/index/tape.png/" class="tape2">
 <div class="chatroom">
     <div class="chatroom-content">
         <div class="box-title chatroom-title">
@@ -94,7 +98,7 @@
     </div>
     <footer class="bottom-bar">
         {% set latestVer = collections.updates[collections.updates.length -1]%}
-        <span>est. 2023 | version {{ latestVer.data.version }}</span>
+        <span>est. 2023 | version {{ latestVer.data.version }} | <a href="/credits/">credits</a></span>
         <span>
             Theme:
         <select id="themeSelector" onchange="changeTheme(this.value)">
@@ -107,7 +111,6 @@
 </div>
 <audio id="mySound" style="display: none" preload="auto">
     <source src="https://files.catbox.moe/bc2t8s.mp3" type="audio/mpeg" />
-    <script src="js/musicplayer.js"></script>
 </audio>
 </body>
 

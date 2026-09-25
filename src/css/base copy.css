@@ -1,0 +1,409 @@
+/* ROOT */
+:root {
+    --button-color: rgb(130, 18, 18);
+    --button-color-hover: rgb(82, 10, 10);
+    --wrap-color: rgba(32, 11, 30, 0.9);
+    --marquee-color: rgb(68, 18, 18);
+    --nav-color: rgb(105, 30, 30);
+    --nav-color-hover: rgb(39, 13, 13);
+    --box-content-color: rgb(29, 3, 3);
+    --box-subcontent-color: rgb(87, 30, 30);
+    --box-subcontent-border: 3px rgb(138, 16, 16) solid;
+    --h1: rgb(104, 18, 13);
+    --nav-color-bg: rgb(0, 0, 0);
+    --dither-gradient: url("/img/Index/dither.png"), linear-gradient(180deg, rgb(152, 31, 31) 50%, rgb(73, 4, 4) 80%);
+    --banner-bg: url("/img/Index/ban.jpg");
+    --bg-image: linear-gradient(180deg,rgba(255, 247, 237, 1) 0%, rgba(240, 227, 218, 1) 51%, rgba(212, 193, 190, 1) 100%);;
+    --bg-color: rgb(12, 10, 24);
+    --font: "MS PGothic";
+    --footer: rgb(63, 8, 8);
+    --border-color: rgb(198, 22, 22);
+    --comment-text: rgb(255, 255, 255);
+}
+/* :root {
+    --button-color: rgb(130, 18, 18);
+    --button-color-hover: rgb(82, 10, 10);
+    --wrap-color: rgba(32, 11, 30, 0.9);
+    --marquee-color: rgb(68, 18, 18);
+    --nav-color: rgb(105, 30, 30);
+    --nav-color-hover: rgb(39, 13, 13);
+    --box-content-color: rgb(29, 3, 3);
+    --box-subcontent-color: rgb(87, 30, 30);
+    --box-subcontent-border: 3px rgb(138, 16, 16) solid;
+    --h1: rgb(104, 18, 13);
+    --nav-color-bg: rgb(0, 0, 0);
+    --dither-gradient: url("/img/Index/dither.png"), linear-gradient(180deg, rgb(152, 31, 31) 50%, rgb(73, 4, 4) 80%);
+    --banner-bg: url("/img/Index/ban.jpg");
+    --bg-image: url(/img/Index/test.jpg);
+    --bg-color: rgb(12, 10, 24);
+    --font: "Saitamaar";
+    --footer: rgb(63, 8, 8);
+    --border-color: rgb(198, 22, 22);
+    --comment-text: rgb(255, 255, 255);
+} */
+
+
+/* FONTS  */
+
+@font-face {
+    font-family: "Saitamaar";
+    src: url('/fonts/Saitamaar-Regular.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: "04b31";
+    src: url('/fonts/04B_31__.TTF') format("truetype");
+}
+
+
+/* FONTS END */
+
+.tape {
+    width: 30%;
+    position: fixed;
+    transform: rotate(50deg);
+    top: -7vw;
+    left: 73vw;
+    z-index: -1;
+    display: none;
+}
+
+.tape2 {
+    width: 30%;
+    position: fixed;
+    transform: rotate(75deg);
+    top: -4vw;
+    left: 77vw;
+    z-index: -1;
+    display: none;
+}
+
+/* Main */
+html {
+    font-size: 1.2rem;
+}
+
+* {
+    box-sizing: border-box;
+    image-rendering: pixelated;
+}
+
+body {
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--bg-color);
+    background-attachment: fixed;
+    font-size: .8rem;
+    line-height: 1.1;
+    font-family: var(--font);
+    color: white;
+
+}
+
+a {
+
+    text-decoration: none;
+    color: white;
+}
+
+p {
+    margin: 0.3125rem;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    margin-bottom: 0.1875rem;
+}
+
+select {
+    font-family: unset;
+    text-align: center;
+    border: 1px var(--border-color) solid;
+    background-color: var(--box-content-color);
+}
+
+.textbox {
+    border: 1px var(--border-color) solid;
+    word-wrap: break-word;
+    width: 100%;
+    padding: 0.25rem;
+}
+
+.textbox h1 {
+    background-color: var(--h1);
+    padding: 0.1875rem;
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* Main End */
+
+.wrap {
+    background-color: var(--wrap-color);
+    width: 100%;
+    max-width: 57.5rem;
+    margin: auto;
+    /* margin: 2.1875rem auto; */
+    border: 0.125rem var(--border-color) solid;
+}
+
+.top-bar {
+    background: var(--dither-gradient);
+    background-blend-mode: multiply;
+    background-size: 3.125rem, auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px var(--border-color) solid;
+    padding: 0.1875rem;
+}
+
+.top-bar span {
+    color: white;
+}
+
+.bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.1875rem;
+}
+
+.bottom-bar span {
+    color: white;
+}
+
+.banner {
+    min-height: 9.375rem;
+    background-color: rgb(152, 152, 152);
+    border-bottom: 1px var(--border-color) solid;
+    background: var(--banner-bg);
+    background-size: cover;
+    background-position: center;
+}
+
+.nav {
+    background-color: var(--nav-color-bg);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border-bottom: 1px var(--border-color) solid;
+    gap: 0.0625rem;
+}
+
+.nav a {
+    display: block;
+    margin: auto;
+    font-family: '04b31';
+    font-size: 0.75rem;
+    width: 100%;
+    background-color: var(--nav-color);
+    padding: 0.125rem 0.5rem;
+    text-align: center;
+}
+
+.nav a:hover {
+    background-color: var(--nav-color-hover);
+}
+
+/* Marquee */
+.text-scroll {
+    --gap: 1rem;
+    border-bottom: 0.0625rem var(--border-color) solid;
+    overflow: hidden;
+    display: flex;
+    gap: var(--gap);
+    background-color: var(--marquee-color);
+}
+
+.text-scroll-content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap);
+    animation: scroll 90s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+/* Marquee end */
+
+/* Box */
+.box {
+    margin-top: 0.625rem;
+    border: 1px var(--border-color) solid;
+    width: 100%;
+}
+
+.box-title {
+    background: var(--dither-gradient);
+    background-blend-mode: multiply;
+    background-size: 3.125rem, auto;
+    padding: 0.125rem 0.3125rem;
+    border-bottom: 1px var(--border-color) solid;
+    font-style: italic;
+    font-size: 1rem;
+    color: white;
+    /* clip-path: polygon(0 0, 95% 0%, 100% 40%, 100% 100%, 0 100%); */
+}
+
+.box-title span {
+    text-decoration: underline;
+}
+
+.box-content {
+    padding: 0.5rem;
+    background-color: var(--box-content-color)
+}
+
+/* Box end */
+
+/* Pic */
+.pic img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Pic end */
+
+.text-scroll-mobile {
+    display: none;
+}
+
+/* Chatroom */
+.chatroom {
+    position: fixed;
+    bottom: -20.625rem;
+    left: 0.0625rem;
+    z-index: 99999;
+    transition: 0.2s;
+}
+
+.chatroom:hover {
+    bottom: 1.25rem;
+    transition: 0.2s;
+}
+
+.chatroom-content {
+    width: 15.625rem;
+    height: 21.875rem;
+    background-color: rgb(115, 115, 115);
+}
+
+.chatroom-title {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.chatroom-title a {
+    color: white;
+}
+
+.chatroom-responsive {
+    padding: 0;
+    filter: grayscale();
+    height: 21.875rem;
+}
+
+.chatroom-responsive-show {
+    display: none;
+}
+
+/* Chatroom */
+
+.bottom-bar {
+    background-color: var(--footer);
+    border-top: var(--border-color) 1px solid;
+}
+
+.crt::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+
+.crt::after {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.1);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+@media (max-width: 1500px) {
+    .chatroom {
+        display: none;
+    }
+
+    .chatroom-responsive-show {
+        display: block;
+    }
+}
+
+@media (max-width: 780px) {
+    body {
+        margin: 0;
+    }
+
+    .wrap {
+        max-width: 100%;
+        border: 0;
+    }
+
+    .nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #linkNav {
+        grid-column: span 3
+    }
+
+    .textbox {
+        order: 2;
+    }
+
+    .banner {
+        min-height: 25vw;
+    }
+
+    .box {
+        margin-top: 0rem;
+    }
+
+    .box-title {
+        clip-path: unset;
+    }
+
+    .text-scroll {
+        display: none;
+    }
+
+    .text-scroll-mobile {
+        display: flex;
+    }
+}

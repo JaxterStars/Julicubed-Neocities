@@ -1,0 +1,10 @@
+
+.credits-content {
+    padding: 0.25rem;
+    gap: 0.25rem;
+}
+.textbox a {
+    width: 100%;
+    display: block;
+    text-decoration: underline;
+}
