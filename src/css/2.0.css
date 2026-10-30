@@ -1,0 +1,87 @@
+:root {
+    --button-color: rgb(121, 147, 247);
+    --button-color-hover: rgb(96, 125, 240);
+    --wrap-color: rgb(255, 255, 255);
+    --marquee-color: hsl(233, 84%, 68%);
+    --nav-color: linear-gradient(180deg, #f4f7ff 41%, #d5e0ff 56%);
+    --nav-color-hover: linear-gradient(180deg, #c2d2fd 41%, #9bb6ff 56%);
+    --box-content-color: url(/img/theme/2.0/paper.png) 0 0 / 200px;
+    --box-subcontent-color: rgb(255, 255, 255);
+    --box-subcontent-border: 3px rgb(96, 106, 240) solid;
+    --h1: hsl(233, 77%, 63%);
+    --nav-color-bg: hsl(233, 77%, 63%);
+    --dither-gradient: linear-gradient(180deg, #a3bcff 41%, #6d92f8 56%);
+    --banner-bg: url(/img/theme/2.0/atopbar.png);
+    --bg-image: url(/img/theme/2.0/wallpaper.gif), linear-gradient(0deg,rgb(15, 33, 59) 55%, rgb(93, 119, 131) 100%);
+    --bg-color: rgb(255, 255, 255);
+    --footer: rgb(58, 60, 205);
+    --border-color: hsl(233, 77%, 63%);
+    --comment-text: rgb(0, 0, 0);
+    --font: "Jersey 10";
+}
+
+@font-face {
+    font-family: "Jersey 10";
+    src: url('/fonts/Jersey10-Regular.ttf') format("truetype");
+}
+
+img {
+    filter: unset;
+}
+html {
+    cursor: auto;
+}
+body {
+    background-position: center;
+    background-repeat: repeat;
+    background-size: auto;
+    background-blend-mode: overlay;
+    color: rgb(0, 0, 0);
+    background-color: unset;
+    font-size: 1.2rem;
+    line-height: unset;
+}
+a {
+    cursor:pointer;
+    color: black;
+}
+select {
+    color: unset;
+}
+h1 {
+    color: white;
+}
+
+.tape {
+    display: none;
+}
+.tape2 {
+    display: none;
+}
+.stats {
+    background-color: hsl(233, 77%, 63%);
+}
+
+.box-title {
+    font-style: unset;
+    color: black;
+    font-size: 1.2rem;
+}
+.textbox h1 {
+    font-size: unset;
+}
+.rss:hover img{
+    filter: brightness(0) saturate(100%) invert(97%) sepia(90%) saturate(4666%) hue-rotate(358deg) brightness(105%) contrast(102%);
+}
+
+.rss img {
+    filter: brightness(0) saturate(100%) invert(26%) sepia(70%) saturate(1770%) hue-rotate(202deg) brightness(98%) contrast(100%);
+}
+
+.nav a {
+    font-family: unset;
+    font-size: unset;
+}
+.profile-picture img {
+    border-radius: unset;
+}

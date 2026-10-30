@@ -200,13 +200,13 @@ select {
     font-family: '04b31';
     font-size: 0.75rem;
     width: 100%;
-    background-color: var(--nav-color);
+    background: var(--nav-color);
     padding: 0.125rem 0.5rem;
     text-align: center;
 }
 
 .nav a:hover {
-    background-color: var(--nav-color-hover);
+    background: var(--nav-color-hover);
 }
 
 /* Marquee */
@@ -261,7 +261,7 @@ select {
 
 .box-content {
     padding: 0.25rem;
-    background-color: var(--box-content-color)
+    background: var(--box-content-color)
 }
 
 /* Box end */
