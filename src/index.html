@@ -105,7 +105,8 @@ partialsCSS:
                 <span>ART - LATEST</span>
             </div>
             <div class="box-content art">
-                    {% for art in collections.art reversed limit:4 %}
+                    {% assign recent_art = collections.art | reverse %}
+                    {% for art in recent_art limit:4 %}
                     <a href="{{ art.url }}"><img src="/img/art/thumbnails/{{ art.data.thumbnail }}"
                             loading="lazy" /></a>
                     {% endfor %}
