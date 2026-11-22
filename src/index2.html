@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/base2.css">
+    <link id="colortheme" rel="preload" as="style" onload="this.rel='stylesheet'" href="">
+    <title>JULICUBED</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.gif">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="/js/sound.js"></script>
+    <script src="https://u.widget.st/ar.js"></script>
+    <script src="/js/themes.js"></script>
+
+</head>
+</body>
+
+<div id="ocean"></div>
+
+<div class="wrap">
+
+    <div class="top">
+        <span>Jaxterstars.neocities.org</span>
+        <span>last updated: <span id="last-updated">loading...</span></span>
+    </div>
+
+    <div class="bottom">
+        <span>Version 4.0 / est. 2023 / credits</span>
+    </div>
+
+    <div class="content">
+        <div class="splash">
+            <span>JULICUBED.</span>
+        </div>
+        <div class="box wide">
+
+        </div>
+        <div class="box">
+            <div class="box-header">
+                <span>Changelog.</span>
+                <div class="dots"></div>
+            </div>
+            <div class="box-content">
+                Content
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-header">
+                <span>Latest Art.</span>
+                <div class="dots"></div>
+            </div>
+
+            <div class="box-content">
+                <p>Check out the latest art.</p>
+                <hr>
+                {% assign post = collections.art | last%}
+                <a class="art" href="{{ post.url }}"><img src="/img/art/thumbnails/{{ post.data.thumbnail }}" loading="lazy" /></a>
+                {{
+                post.data.dateString }}
+
+            </div>
+
+        </div>
+        <div class="quarter">
+            <div class="box">
+
+            </div>
+            <div class="box">
+
+            </div>
+            <div class="box">
+
+            </div>
+            <div class="quarter">
+                <div class="box social">
+                    <img src="/img/svg/x.svg">
+                </div>
+                <div class="box social">
+                    <img src="/img/svg/kofi.svg">
+                </div>
+                <div class="box social">
+                    <img src="/img/svg/tumblr.svg">
+                </div>
+                <div class="box social">
+                    <img src="/img/svg/bluesky.svg">
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-header">
+                <span>Latest Review.</span>
+                <div class="dots"></div>
+            </div>
+
+        </div>
+        <div class="box">
+            <div class="box-header">
+                <span>Status.</span>
+                <div class="dots"></div>
+            </div>
+
+        </div>
+        <div class="box">
+            <div class="box-header">
+                <span>Title</span>
+                <div class="dots"></div>
+            </div>
+
+        </div>
+        <div class="box wide">
+
+        </div>
+        <div class="box">
+            <div class="box-header">
+                <span>Webrings.</span>
+                <div class="dots"></div>
+            </div>
+
+        </div>
+        <div class="box">
+            <div class="box-header">
+                <span>Title</span>
+                <div class="dots"></div>
+            </div>
+
+        </div>
+        <div class="box">
+            <div class="box-header">
+                <span>Title</span>
+                <div class="dots"></div>
+            </div>
+
+        </div>
+        <div class="box">
+            <div class="box-header">
+                <span>Title</span>
+                <div class="dots"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    function showLastUpdated(info) {
+        const el = document.getElementById("last-updated");
+        if (info.error) {
+            el.textContent = info.error;
+            return;
+        }
+        el.textContent = new Date(info.last_updated).toLocaleDateString();
+    }
+</script>
+<script>
+    var ocean = document.getElementById("ocean"),
+        waveWidth = 10,
+        waveCount = Math.floor(window.innerWidth / waveWidth),
+        docFrag = document.createDocumentFragment();
+
+    for (var i = 0; i < waveCount; i++) {
+        var wave = document.createElement("div");
+        wave.className += " wave";
+        docFrag.appendChild(wave);
+        wave.style.left = i * waveWidth + "px";
+        wave.style.webkitAnimationDelay = (i / 100) + "s";
+    }
+
+    ocean.appendChild(docFrag);
+</script>
+<script src="https://resrc.cock.institute/v1/neocities?site=jaxterstars&callback=showLastUpdated"></script>
+
+</body>
+
+</html>
+
+<!-- Box Template -->
